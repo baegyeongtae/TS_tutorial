@@ -50,3 +50,21 @@ const login = logText<boolean>(true)
 
 // logText('a');
 // logText(10);
+
+
+
+// interface에 generic 선언하는 방법
+
+// interface Dropdown {
+//   value: string;
+//   selected: boolean;
+// }
+
+// const obj: Dropdown = { value: 'abc', selected: false};
+
+interface Dropdown<T> {
+    value: T;
+    selected: boolean;
+  }
+  
+  const obj: Dropdown<number> = { value: 'abc', selected: false };
