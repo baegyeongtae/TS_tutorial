@@ -51,3 +51,21 @@ function getAllowedOptions<T extends keyof ShoppingItems>(option: T): T {
 getAllowedOptions('nothing');
 // const a = getAllowedOptions('name');
 // a.toUpperCase(); // Name
+
+
+
+// interface에 generic 선언하는 방법
+
+// interface Dropdown {
+//   value: string;
+//   selected: boolean;
+// }
+
+// const obj: Dropdown = { value: 'abc', selected: false};
+
+interface Dropdown<T> {
+  value: T;
+  selected: boolean;
+}
+
+const obj: Dropdown<number> = { value: 'abc', selected: false };
