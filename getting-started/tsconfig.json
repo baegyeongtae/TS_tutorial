@@ -1,0 +1,7 @@
+{
+    "compilerOptions": {
+        "allowJs": true,        // 이 프로젝트 안에 JS를 허용하겠다.
+        "checkJs": true,        // @ts-check
+        "noImplicitAny": true   // 최소한 Any라는 타입도 넣어야 한다.
+    }
+}
