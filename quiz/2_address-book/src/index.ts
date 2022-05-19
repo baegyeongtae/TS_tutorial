@@ -108,12 +108,21 @@ class AddressBook {
   /* ------------------------------------------------ */
 }
 
-let heroes = [
-  { name: 'Tony', age: 30},
-  { name: 'Captain', age: 100}
-];
-heroes.map(function(hero) {
-  return hero.name;
-}); // ['Tony', 'Captain']
+let div = document.querySelector('.container') as HTMLDivElement;
+div.innerText;                  // 타입을 단언했기 때문에 div존재여부를 따질 필요가 없음.
+
+
+// let div = document.querySelector('#app');
+// if (div) {
+//   div.innerText;
+// }
+
+// let heroes = [
+//   { name: 'Tony', age: 30},
+//   { name: 'Captain', age: 100}
+// ];
+// heroes.map(function(hero) {
+//   return hero.name;
+// }); // ['Tony', 'Captain']
 
 new AddressBook();
