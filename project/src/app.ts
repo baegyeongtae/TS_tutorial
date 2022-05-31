@@ -2,7 +2,7 @@
 function $(selector: string) {
   return document.querySelector(selector);
 }
-function getUnixTimestamp(date: any) {
+function getUnixTimestamp(date: Date) {
   return new Date(date).getTime();
 }
 
@@ -99,7 +99,7 @@ function setDeathsList(data: any) {
   const sorted = data.sort(
     (a: any, b: any) => getUnixTimestamp(b.Date) - getUnixTimestamp(a.Date),
   );
-  sorted.forEach(value => {
+  sorted.forEach((value: any) => {
     const li = document.createElement('li');
     li.setAttribute('class', 'list-item-b flex align-center');
     const span = document.createElement('span');
@@ -123,9 +123,9 @@ function setTotalDeathsByCountry(data: any) {
 
 function setRecoveredList(data: any) {
   const sorted = data.sort(
-    (a, b) => getUnixTimestamp(b.Date) - getUnixTimestamp(a.Date),
+    (a: any, b: any) => getUnixTimestamp(b.Date) - getUnixTimestamp(a.Date),
   );
-  sorted.forEach(value => {
+  sorted.forEach((value: any) => {
     const li = document.createElement('li');
     li.setAttribute('class', 'list-item-b flex align-center');
     const span = document.createElement('span');
@@ -188,10 +188,10 @@ function renderChart(data: any, labels: any) {
 }
 
 function setChartData(data: any) {
-  const chartData = data.slice(-14).map(value => value.Cases);
+  const chartData = data.slice(-14).map((value: any) => value.Cases);
   const chartLabel = data
     .slice(-14)
-    .map(value => new Date(value.Date).toLocaleDateString().slice(5, -1));
+    .map((value: any) => new Date(value.Date).toLocaleDateString().slice(5, -1));
   renderChart(chartData, chartLabel);
 }
 
@@ -220,7 +220,7 @@ function setCountryRanksByConfirmedCases(data: any) {
   const sorted = data.Countries.sort(
     (a: any, b: any) => b.TotalConfirmed - a.TotalConfirmed,
   );
-  sorted.forEach(value => {
+  sorted.forEach((value: any) => {
     const li = document.createElement('li');
     li.setAttribute('class', 'list-item flex align-center');
     li.setAttribute('id', value.Slug);
