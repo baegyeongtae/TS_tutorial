@@ -3,7 +3,8 @@
         "allowJs": true,
         "target": "ES5",
         "outDir": "./built",
-        "moduleResolution": "Node"  // Promise를 위해
+        "moduleResolution": "Node",  // Promise를 위해
+        "lib": ["ES2015", "DOM", "DOM.Iterable"]
     },
     "include": ["./src/**/*"]       // 컴파일 시 모든 폴더 (/**) 에 모든 파일 (/*)을 포함 한다.
 }
